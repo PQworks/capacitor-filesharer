@@ -1,0 +1,88 @@
+{
+  "_from": "git+https://github.com/ProteanSoftware/capacitor-filesharer.git",
+  "_id": "@byteowls/capacitor-filesharer@3.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/@byteowls/capacitor-filesharer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/ProteanSoftware/capacitor-filesharer.git",
+    "rawSpec": "https://github.com/ProteanSoftware/capacitor-filesharer.git",
+    "saveSpec": "git+https://github.com/ProteanSoftware/capacitor-filesharer.git",
+    "fetchSpec": "https://github.com/ProteanSoftware/capacitor-filesharer.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/ProteanSoftware/capacitor-filesharer.git#054fc1a17981bd0f7c28f8b27c76d7bd03ef5f52",
+  "_spec": "https://github.com/ProteanSoftware/capacitor-filesharer.git",
+  "_where": "/Volumes/MyNVMe/Users/aem/Desktop/pq-pwa Capacitor 3",
+  "author": {
+    "name": "Michael Oberwasserlechner"
+  },
+  "bugs": {
+    "url": "https://github.com/moberwasserlechner/capacitor-filesharer/issues"
+  },
+  "bundleDependencies": false,
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  },
+  "dependencies": {
+    "file-saver": "^2.0.2"
+  },
+  "deprecated": false,
+  "description": "Capacitor plugin to download and share files for the Web, Android and iOS",
+  "devDependencies": {
+    "@capacitor/android": "3.0.0",
+    "@capacitor/core": "3.0.0",
+    "@capacitor/ios": "3.0.0",
+    "@types/file-saver": "2.0.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.5.3"
+  },
+  "files": [
+    "dist/",
+    "ios/",
+    "android/",
+    "ByteowlsCapacitorFilesharer.podspec"
+  ],
+  "homepage": "https://github.com/moberwasserlechner/capacitor-filesharer",
+  "keywords": [
+    "capacitor",
+    "capacitor-plugin",
+    "share",
+    "files",
+    "filesharer"
+  ],
+  "license": "MIT",
+  "main": "dist/esm/index.js",
+  "name": "@byteowls/capacitor-filesharer",
+  "peerDependencies": {
+    "@capacitor/core": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moberwasserlechner/capacitor-filesharer.git"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rimraf ./dist",
+    "prepublishOnly": "npm run build",
+    "publishLocally": "npm run removePacked && npm run build && npm pack",
+    "removePacked": "rimraf byteowls-capacitor-filesharer-*.tgz",
+    "watch": "tsc --watch"
+  },
+  "types": "dist/esm/index.d.ts",
+  "version": "3.0.0"
+}
