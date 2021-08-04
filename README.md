@@ -10,7 +10,7 @@
 
 `npm i @byteowls/capacitor-filesharer`
 
-Minimum Capacitor version is **2.0.0**
+Minimum Capacitor version is **3.0.0**
 
 ## Configuration
 
@@ -37,7 +37,7 @@ export class SignupComponent {
             base64Data: "...",
             contentType: "application/pdf",
         }).then(() => {
-            // do sth
+            // do something when user downloads or shares the file
         }).catch(error => {
             console.error("File sharing failed", error.message);
         });
