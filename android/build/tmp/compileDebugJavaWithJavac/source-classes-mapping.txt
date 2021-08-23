@@ -1,8 +1,0 @@
-com/byteowls/capacitor/filesharer/BuildConfig.java
- com.byteowls.capacitor.filesharer.BuildConfig
-com/byteowls/capacitor/filesharer/FileSharerProvider.java
- com.byteowls.capacitor.filesharer.FileSharerProvider
-com/byteowls/capacitor/filesharer/FileSharerPlugin.java
- com.byteowls.capacitor.filesharer.FileSharerPlugin
-com/byteowls/capacitor/filesharer/ConfigUtils.java
- com.byteowls.capacitor.filesharer.ConfigUtils
