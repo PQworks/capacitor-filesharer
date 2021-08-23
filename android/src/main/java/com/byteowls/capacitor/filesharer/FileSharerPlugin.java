@@ -1,11 +1,14 @@
 package com.byteowls.capacitor.filesharer;
 
 import android.app.Activity;
-import android.app.Instrumentation;
+import androidx.activity.result.ActivityResult;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Base64;
 import android.util.Log;
+
+import com.getcapacitor.Logger;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
@@ -58,7 +61,7 @@ public class FileSharerPlugin extends Plugin {
         }
 
         String chooserTitle = ConfigUtils.getCallParam(String.class, call, PARAM_ANDROID_CHOOSER);
-        saveCall(call);
+        bridge.saveCall(call);
 
         // save cachedFile to cache dir
         File cachedFile = new File(getCacheDir(), filename);
@@ -104,11 +107,10 @@ public class FileSharerPlugin extends Plugin {
     }
 
     @ActivityCallback
-    private void callbackComplete(PluginCall call, Instrumentation.ActivityResult result) {
+    private void callbackComplete(PluginCall call, ActivityResult result) {
         if (result.getResultCode() == Activity.RESULT_CANCELED) {
             call.reject("Activity canceled");
         } else {
-            call = getSavedCall();
             call.resolve();
         }
     }
